@@ -77,6 +77,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem "bootstrap-sass", ">= 3.4.1"
+gem 'jp_prefecture'
 gem 'jquery-rails'
 
 gem "actionview", ">= 5.2.4.2"
