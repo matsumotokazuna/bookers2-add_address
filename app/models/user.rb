@@ -23,4 +23,11 @@ class User < ApplicationRecord
     self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
   end
 
+  def fruit_address
+    "%s %s"%([self.prefecture_code,self.city,self.building])
+  end
+  
+  geocoded_by :fruit_address
+  after_validation :geocode
+
 end
